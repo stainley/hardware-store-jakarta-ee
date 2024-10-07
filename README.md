@@ -11,7 +11,7 @@ architecture involving WAR, EAR, EJB, and utility modules.**
 - [Modules Overview](#modules-overview)
     - [WAR Module](#war-module)
     - [EJB Module](#ejb-module)
-    - [JPA Module](#jpa-module)
+    - [JPA Module](#-jpa-module)
     - [Utility Module](#utility-module)
     - [EAR Module](#ear-module)
 - [Installation](#installation)
