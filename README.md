@@ -107,3 +107,49 @@ To set up the project locally:
    ```bash
    git clone https://github.com/yourusername/hardware-store.git
    cd hardware-store
+
+2. **Build with Maven**:
+    ```bash
+   mvn clean install
+
+3. **Configure the Application Server**:
+    - Set up **WildFly** or **GlassFish** in IntelliJ.
+    - Deploy the **`hardware-store-ear`** module.
+
+
+## 🚀 Usage
+
+**Running the Application**:
+
+- Once deployed on the server, the application can be accessed via a web browser at:
+
+  ```http request
+  http://localhost:8080/hardware-store
+
+### REST API Endpoints:
+
+* The REST API endpoints are exposed via /api.
+
+* Example endpoints:
+    * **GET** `/api/products`: List all products.
+    * **POST** `/api/customers`: Create a new customer.
+
+# 🤝 Contributing
+
+We welcome contributions to improve this project. Please follow the steps below:
+
+1. Fork the repository.
+2. Create a new feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+# 📧 Contact
+
+For any queries or suggestions, please contact:
+
+* Project Maintainer: Stainley Lebron
+* GitHub: https://github.com/stainley
+
+🛠️ Happy Coding!
+
