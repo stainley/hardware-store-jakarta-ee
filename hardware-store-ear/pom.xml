@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hardwarestore</groupId>
+        <artifactId>hardware-store-parent</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <artifactId>hardware-store-ear</artifactId>
+    <packaging>ear</packaging>
+    <name>hardware-store-ear</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hardwarestore</groupId>
+            <artifactId>hardware-store-war</artifactId>
+            <version>0.0.1</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.hardwarestore</groupId>
+            <artifactId>hardware-store-ejb</artifactId>
+            <version>0.0.1</version>
+            <type>ejb</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <modules>
+                        <webModule>
+                            <groupId>com.hardwarestore</groupId>
+                            <artifactId>hardware-store-war</artifactId>
+                            <contextRoot>hardware-store</contextRoot>
+                        </webModule>
+                        <ejbModule>
+                            <groupId>com.hardwarestore</groupId>
+                            <artifactId>hardware-store-ejb</artifactId>
+                        </ejbModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
