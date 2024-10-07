@@ -1,4 +1,4 @@
-package com.hardware.store.jpa.config;
+package com.hardware.store.ejb.config;
 
 import io.lettuce.core.RedisClient;
 import io.lettuce.core.api.StatefulRedisConnection;

@@ -1,4 +1,4 @@
-package com.hardware.store.jpa.config;
+package com.hardware.store.ejb.config;
 
 
 import jakarta.annotation.PostConstruct;
