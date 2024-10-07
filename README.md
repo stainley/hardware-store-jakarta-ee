@@ -1,8 +1,10 @@
 # 🛠️ Hardware Store Management System
 
-**A Jakarta EE-based Enterprise application for managing a hardware store, developed with IntelliJ IDEA using a modular architecture involving WAR, EAR, EJB, and utility modules.**
+**A Jakarta EE-based Enterprise application for managing a hardware store, developed with IntelliJ IDEA using a modular
+architecture involving WAR, EAR, EJB, and utility modules.**
 
 ## 📋 Table of Contents
+
 - [About](#about)
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
@@ -21,9 +23,12 @@
 
 ## 📝 About
 
-**Hardware Store Management System** is an enterprise-level application to manage products, customers, and orders in a hardware store. It follows best practices for Jakarta EE applications and uses a modular structure to ensure easy scalability, maintainability, and separation of concerns.
+**Hardware Store Management System** is an enterprise-level application to manage products, customers, and orders in a
+hardware store. It follows best practices for Jakarta EE applications and uses a modular structure to ensure easy
+scalability, maintainability, and separation of concerns.
 
 The project consists of:
+
 - **Web Layer**: A user interface and REST APIs.
 - **Business Logic Layer**: Business services using EJB.
 - **Persistence Layer**: JPA entities for data access.
@@ -37,7 +42,7 @@ The project consists of:
 - **Maven** (for build automation)
 - **IntelliJ IDEA Ultimate Edition**
 - **WildFly/GlassFish** (for application server)
-- **Java 11** (or higher)
+- **Java 21** (or higher)
 
 ---
 
@@ -50,6 +55,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
 ## 📦 Modules Overview
 
 ### 🌐 WAR Module
+
 - **Artifact ID**: `hardware-store-war`
 - **Packaging**: `war`
 - **Responsibilities**:
@@ -58,6 +64,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
     - Handles customer and product interactions
 
 ### 🏢 EJB Module
+
 - **Artifact ID**: `hardware-store-ejb`
 - **Packaging**: `ejb`
 - **Responsibilities**:
@@ -66,6 +73,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
     - Uses `@Stateless` for stateless services
 
 ### 🗄️ JPA Module
+
 - **Artifact ID**: `hardware-store-jpa`
 - **Packaging**: `jar`
 - **Responsibilities**:
@@ -74,6 +82,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
     - Contains entities like `Product`, `Customer`, `Order`
 
 ### 🔧 Utility Module
+
 - **Artifact ID**: `hardware-store-util`
 - **Packaging**: `jar`
 - **Responsibilities**:
@@ -81,6 +90,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
     - Provides utility methods for validation and logging
 
 ### 📦 EAR Module
+
 - **Artifact ID**: `hardware-store-ear`
 - **Packaging**: `ear`
 - **Responsibilities**:
