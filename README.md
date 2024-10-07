@@ -72,7 +72,7 @@ The project is divided into multiple modules to achieve a clean and modular arch
     - EJB services such as `ProductService`, `CustomerService`, `OrderService`
     - Uses `@Stateless` for stateless services
 
-### 🗄️ JPA Module
+### 🗄️ [JPA Module](hardware-store-jpa/README.md)
 
 - **Artifact ID**: `hardware-store-jpa`
 - **Packaging**: `jar`
@@ -115,7 +115,6 @@ To set up the project locally:
 3. **Configure the Application Server**:
     - Set up **WildFly** or **GlassFish** in IntelliJ.
     - Deploy the **`hardware-store-ear`** module.
-
 
 ## 🚀 Usage
 
