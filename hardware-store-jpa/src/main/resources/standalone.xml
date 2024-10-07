@@ -1,0 +1,15 @@
+<subsystem xmlns="urn:jboss:domain:datasources:6.0">
+    <datasource jndi-name="java:/jdbc/HardwareStoreDS" pool-name="HardwareStorePool">
+        <connection-url>jdbc:mysql://localhost:3306/hardware_store</connection-url>
+        <driver>mysql</driver>
+        <security>
+            <user-name>root</user-name>
+            <password>password</password>
+        </security>
+    </datasource>
+    <drivers>
+        <driver name="mysql" module="com.mysql">
+            <xa-datasource-class>com.mysql.cj.jdbc.MysqlXADataSource</xa-datasource-class>
+        </driver>
+    </drivers>
+</subsystem>

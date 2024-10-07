@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project-defaults xmlns="urn:jboss:project-defaults:1.0">
+    <datasource jndi-name="java:/jdbc/HardwareStoreDS"
+                datasource-name="HardwareStoreDS"/>
+</project-defaults>
