@@ -14,9 +14,11 @@ public class SecurityInterceptor {
         if (context.getMethod().getName().startsWith("admin")) {
             if (!isAdmin()) {
                 throw new SecurityException("Access denied");
+            } else {
+                return context.proceed();
             }
         }
-        return context.proceed();
+        return null;
     }
 
     public boolean isAdmin() {

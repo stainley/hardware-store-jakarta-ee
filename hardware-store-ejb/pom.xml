@@ -23,7 +23,26 @@
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.3</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>io.lettuce</groupId>
             <artifactId>lettuce-core</artifactId>
@@ -37,11 +56,23 @@
         </dependency>
 
         <dependency>
+            <groupId>io.openliberty.api</groupId>
+            <artifactId>io.openliberty.ejbcontainer</artifactId>
+            <version>1.0.70</version>
+        </dependency>
+        <dependency>
+            <groupId>io.openliberty.api</groupId>
+            <artifactId>io.openliberty.transaction</artifactId>
+            <version>1.1.70</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.hardwarestore</groupId>
             <artifactId>hardware-store-jpa</artifactId>
             <version>0.0.1</version>
             <scope>compile</scope>
         </dependency>
+
     </dependencies>
 
     <build>

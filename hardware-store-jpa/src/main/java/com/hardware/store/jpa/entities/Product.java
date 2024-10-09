@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "product")
-public class Product extends BaseEntity implements Serializable {
+public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,5 +1,8 @@
 package com.hardware.store.ejb.service;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.hardware.store.ejb.adapter.LocalDateTimeAdapter;
 import com.hardware.store.ejb.interceptors.LoggingInterceptor;
 import com.hardware.store.ejb.interceptors.annotations.LoggingInterceptorBinding;
 import com.hardware.store.ejb.config.RedisConfig;
@@ -8,25 +11,38 @@ import com.hardware.store.jpa.repository.ProductRepository;
 import io.lettuce.core.api.sync.RedisCommands;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
+
 import jakarta.inject.Inject;
 import jakarta.interceptor.Interceptors;
 import redis.clients.jedis.json.DefaultGsonObjectMapper;
 import redis.clients.jedis.json.JsonObjectMapper;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 @Stateless
 public class ProductService {
+
+    private static final Gson gson = new GsonBuilder()
+            .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
+
+    private static final JsonObjectMapper objectMapper = new DefaultGsonObjectMapper();
 
     @EJB
     private ProductRepository productRepository;
 
-    @Inject
+
     private RedisConfig redisConfig;
 
-    private final static JsonObjectMapper objectMapper = new DefaultGsonObjectMapper();
+    @Inject
+    public ProductService(RedisConfig redisConfig) {
+        this.redisConfig = redisConfig;
+    }
 
+    public ProductService() {
+    }
 
     @Interceptors({LoggingInterceptor.class})
     @LoggingInterceptorBinding
@@ -66,11 +82,11 @@ public class ProductService {
     }
 
 
-    private String serializeProduct(Product product) {
+    public String serializeProduct(Product product) {
         return objectMapper.toJson(product);
     }
 
-    private Product deserializedProduct(String productJson) {
+    public Product deserializedProduct(String productJson) {
         return objectMapper.fromJson(productJson, Product.class);
     }
 }

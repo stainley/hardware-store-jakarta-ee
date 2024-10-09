@@ -10,7 +10,6 @@ public class AuditLogService {
     private final Logger logger = LoggerFactory.getLogger(AuditLogService.class);
 
     public void logChange(String message) {
-        System.out.println("Audit log: " + message);
         logger.info("Audit log: {}", message);
     }
 }
