@@ -22,6 +22,16 @@
         <jakarta.version>10.0.0</jakarta.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>${java.version}</maven.compiler.release>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.token>sqp_290ff953fd3088b0b5add943bba694e90a5b27e1</sonar.token>
+        <sonar.projectKey>hardware-store</sonar.projectKey>
+        <sonar.projectName>hardware-store</sonar.projectName>
+        <sonar.projectVersion>1.0.0</sonar.projectVersion>
+        <sonar.sources>${project.basedir}/src/main/java</sonar.sources>
+        <sonar.tests>${project.basedir}/src/test/java</sonar.tests>
+        <sonar.java.binaries>${project.basedir}/target/classes</sonar.java.binaries>
+        <sonar.exclusions>**/test/**,**/generated/**</sonar.exclusions>
+        <!--<sonar.modules>hardware-store-ejb,hardware-store-jpa,hardware-store-war</sonar.modules>-->
     </properties>
 
     <dependencyManagement>
@@ -34,6 +44,25 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>4.0.0.4121</version>
+                <executions>
+                    <execution>
+                        <id>sonar</id>
+                        <goals>
+                            <goal>sonar</goal>
+                        </goals>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <profiles>
         <profile>

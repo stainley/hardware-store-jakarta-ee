@@ -11,6 +11,10 @@
     <packaging>ear</packaging>
     <name>hardware-store-ear</name>
 
+    <properties>
+        <sonar.skip>true</sonar.skip>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.hardwarestore</groupId>
