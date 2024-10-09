@@ -10,5 +10,8 @@
     <packaging>jar</packaging>
     <name>hardware-store-uti</name>
 
+    <properties>
+        <sonar.skip>true</sonar.skip>
+    </properties>
 
 </project>

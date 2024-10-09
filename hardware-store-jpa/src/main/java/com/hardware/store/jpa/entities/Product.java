@@ -2,7 +2,6 @@ package com.hardware.store.jpa.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 
 import java.io.Serializable;
 
@@ -27,6 +26,26 @@ public class Product extends BaseEntity implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private Category category;
+
+    public Product() {
+    }
+
+    public Product(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Product(Long id, String name, String description, Double price) {
+        this(id, name);
+        this.description = description;
+        this.price = price;
+    }
+
+    public Product(Long id, String name, String description, Double price, String image, Category category) {
+        this(id, name, description, price);
+        this.image = image;
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
